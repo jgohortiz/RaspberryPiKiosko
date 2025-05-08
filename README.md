@@ -66,6 +66,7 @@ sudo apt full-upgrade
 ```
 sudo apt install wtype
 sudo apt install ydotool
+sudo apt install tightvncserver
 ```
 
 ### CONFIGURAR EL INICIO EN DESKTOP (MODO ESCRITORIO) CON AUTOLOGIN
@@ -139,3 +140,16 @@ cursor = /home/pi/hide_cursor.sh
 screensaver = false
 dpms = false
 ```
+
+> [!NOTE] 
+> **tightvncserver**: Iniciar el servicio de VNC
+
+- Ejecute
+```
+tightvncserver
+```
+- La primera vez deberá especificar la contraseña
+```
+Password >> passwordPiVNC*
+```
+Para conectarse use la IP y el puerto 5901
