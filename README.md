@@ -57,9 +57,10 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-### Instale wtype
+### Instale wtype + ydotool
 ```
 sudo apt install wtype
+sudo apt install ydotool
 ```
 
 ### CONFIGURAR EL INICIO EN DESKTOP (MODO ESCRITORIO) CON AUTOLOGIN
@@ -80,9 +81,41 @@ sudo raspi-config
 	
 ### INICIAR RASPBERRY PI EN MODO QUIOSCO
 
+#### run_kiosk.sh
+- Cree el archivo con el script de inicio
+```
+sudo nano /home/pi/run_kiosk.sh
+```
+-Adicione el siguiente contenido
+```
+sleep 15
+chromium-browser https://raspberrypi.com https://time.is/London --kiosk --noerrdialogs --disable-infobars --no-first-run --ozone-platform=wayland --enable-features=OverlayScrollbar --start-maximized
+```
+- Otorge permisos
+```
+sudo chmod +x /home/pi/run_kiosk.sh
+```
+
+#### hide_cursor.sh
+- Cree el archivo con el script de inicio
+```
+sudo nano /home/pi/hide_cursor.sh
+```
+-Adicione el siguiente contenido
+```
+sleep 15
+sudo ydotool mousemove --delay 1000 10000 10000
+```
+- Otorge permisos
+```
+sudo chmod +x /home/pi/hide_cursor.sh
+
+
+
+
 #### Edite el archivo de configuración
 ```
-sudo nano .config/wayfire.ini
+sudo nano /home/pi/.config/wayfire.ini
 ```
 
 #### Establezca los siguientes parámetros
@@ -90,11 +123,11 @@ sudo nano .config/wayfire.ini
 sudo nano /home/pi/.config/wayfire.ini
 ```
 
-#### ADICIONE EN [AUTOSTART]
+#### Adicione en [autostart]
 ```
 [autostart]
-chromium = chromium-browser https://raspberrypi.com https://time.is/London --kiosk --noerrdialogs --disable-infobars --no-first-run --ozone-platform=wayland --enable-features=OverlayScrollbar --start-maximized
-switchtab = bash ~/switchtab.sh
+kiosk = /home/pi/run_kiosk.sh
+cursor = /home/pi/hide_cursor.sh
 screensaver = false
 dpms = false
 ```
