@@ -1,7 +1,7 @@
 # RaspberryPiKiosko
 Raspberry Pi en modo quiosco
 
-##CONFIGURAR SSH
+## CONFIGURAR SSH
 ### Edite el archivo de configuración
 
 nano /etc/ssh/sshd_config
@@ -26,7 +26,7 @@ Banner /etc/issue
 ### Reinicie el servicio
 sudo systemctl restart ssh
 
-##BANNER DE ENTRADA
+## BANNER DE ENTRADA
 ## Edite el archivo de configuración
 
 nano /etc/issue
