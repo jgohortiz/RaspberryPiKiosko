@@ -57,7 +57,7 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-### Instale wtype + ydotool
+### Instale wtype + ydotool
 ```
 sudo apt install wtype
 sudo apt install ydotool
