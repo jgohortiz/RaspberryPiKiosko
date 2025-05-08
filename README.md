@@ -91,7 +91,7 @@ sudo raspi-config
 ```
 sudo nano /home/pi/run_kiosk.sh
 ```
--Adicione el siguiente contenido
+- Adicione el siguiente contenido
 ```
 sudo killall -I chromium
 sleep 5
@@ -119,18 +119,12 @@ sudo ydotool mousemove --delay 1000 10000 10000
 sudo chmod +x /home/pi/hide_cursor.sh
 ```
 
-
-#### Edite el archivo de configuración
+#### wayfire.ini
+- Edite el archivo de configuración
 ```
 sudo nano /home/pi/.config/wayfire.ini
 ```
-
-#### Establezca los siguientes parámetros
-```
-sudo nano /home/pi/.config/wayfire.ini
-```
-
-#### Adicione en [autostart]
+- Adicione en [autostart]
 ```
 [autostart]
 kiosk = /home/pi/run_kiosk.sh
