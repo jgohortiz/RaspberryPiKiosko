@@ -86,7 +86,9 @@ sudo raspi-config
 	
 ### INICIAR RASPBERRY PI EN MODO QUIOSCO
 
-#### run_kiosk.sh
+> [!NOTE] 
+> **run_kiosk.sh**: Este script ejecuta el navegador
+
 - Cree el archivo con el script de inicio
 ```
 sudo nano /home/pi/run_kiosk.sh
@@ -103,8 +105,9 @@ chromium-browser https://time.is/London --kiosk --noerrdialogs --disable-infobar
 ```
 sudo chmod +x /home/pi/run_kiosk.sh
 ```
+> [!NOTE] 
+> **hide_cursor.sh**: Este script mueve el puntero
 
-#### hide_cursor.sh
 - Cree el archivo con el script de inicio
 ```
 sudo nano /home/pi/hide_cursor.sh
@@ -118,8 +121,9 @@ sudo ydotool mousemove --delay 1000 10000 10000
 ```
 sudo chmod +x /home/pi/hide_cursor.sh
 ```
+> [!NOTE] 
+> **wayfire.ini**: Este archivo hace el llamado inicial  los script
 
-#### wayfire.ini
 - Edite el archivo de configuración
 ```
 sudo nano /home/pi/.config/wayfire.ini
