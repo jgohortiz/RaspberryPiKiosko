@@ -86,7 +86,7 @@ sudo raspi-config
 	
 ### INICIAR RASPBERRY PI EN MODO QUIOSCO
 
-#### run_kiosk.sh
+#### run_kiosk.sh
 - Cree el archivo con el script de inicio
 ```
 sudo nano /home/pi/run_kiosk.sh
@@ -109,7 +109,7 @@ sudo chmod +x /home/pi/run_kiosk.sh
 ```
 sudo nano /home/pi/hide_cursor.sh
 ```
--Adicione el siguiente contenido
+- Adicione el siguiente contenido
 ```
 sleep 15
 sudo ydotool mousemove --delay 1000 10000 10000
@@ -117,7 +117,7 @@ sudo ydotool mousemove --delay 1000 10000 10000
 - Otorge permisos
 ```
 sudo chmod +x /home/pi/hide_cursor.sh
-
+```
 
 
 #### Edite el archivo de configuración
