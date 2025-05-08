@@ -78,6 +78,9 @@ sudo raspi-config
 - System Options 
 	- Autologin
 		- Yes
+- Interface Option 
+	- VNC
+		- Yes		
 - Advanced Options
 	- Wayland
 		- wayfire
