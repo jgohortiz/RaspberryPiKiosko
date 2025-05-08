@@ -1,3 +1,8 @@
+<!-- 
+https://www.raspberrypi.com/tutorials/how-to-use-a-raspberry-pi-in-kiosk-mode/
+https://core-electronics.com.au/guides/raspberry-pi-kiosk-mode-setup/
+-->
+
 # RaspberryPiKiosko
 Raspberry Pi en modo quiosco
 
