@@ -35,3 +35,11 @@ sudo systemctl restart ssh
 nano /etc/issue
 ```
 
+## INSTALAR SO
+Como sistema operativo, elige Raspberry Pi OS, instalalo usando Raspberry Pi Imager. Durante la etapa de personalización del sistema operativo, edite la configuración de la siguiente manera:
+- Ingrese un nombre de host de su elección
+- Ingrese un nombre de usuario y una contraseña
+- Para conexión inalámbrica
+	- Marque la casilla junto a Configurar LAN inalámbrica para que su Pi pueda conectarse automáticamente a Wi-Fi
+	- Ingrese el SSID (nombre) y la contraseña de su red
+	- Marque la casilla junto a Habilitar SSH para que podamos conectarnos al Pi por Putty
