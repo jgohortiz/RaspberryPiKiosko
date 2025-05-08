@@ -93,10 +93,11 @@ sudo nano /home/pi/run_kiosk.sh
 ```
 -Adicione el siguiente contenido
 ```
-sleep 15
 sudo killall -I chromium
+sleep 5
 rm -rf ~/.cache/chromium
-chromium-browser https://horalegal.inm.gov.co/ --kiosk --noerrdialogs --disable-infobars --no-first-run --ozone-platform=wayland --enable-features=OverlayScrollbar --start-maximized --incognito
+sleep 5
+chromium-browser https://time.is/London --kiosk --noerrdialogs --disable-infobars --no-first-run --ozone-platform=wayland --enable-features=OverlayScrollbar --start-maximized
 ```
 - Otorge permisos
 ```
@@ -117,23 +118,6 @@ sudo ydotool mousemove --delay 1000 10000 10000
 ```
 sudo chmod +x /home/pi/hide_cursor.sh
 
-#### run_keystroke.sh
-- Actualización la pagina cada 6 horas
-```
-sudo nano /home/pi/run_keystroke.sh
-```
--Adicione el siguiente contenido
-```
-#sleep 21600
-#while true; do
-#    wtype -P F5
-#    sleep 21600
-#done
-```
-- Otorge permisos
-```
-sudo chmod +x /home/pi/run_keystroke.sh
-
 
 
 #### Edite el archivo de configuración
@@ -151,7 +135,6 @@ sudo nano /home/pi/.config/wayfire.ini
 [autostart]
 kiosk = /home/pi/run_kiosk.sh
 cursor = /home/pi/hide_cursor.sh
-keystroke = /home/pi/run_keystroke.sh
 screensaver = false
 dpms = false
 ```
