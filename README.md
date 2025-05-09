@@ -106,11 +106,21 @@ Este script ejecuta el navegador
 
 - Adicione el siguiente contenido
   ```
+  #!/bin/bash
+  
+  # Establezca este valor como predeterminado, use la variable de entorno URL_KIOSK.
+  URL_KIOSK="https://www.youtube.com/watch?v=yul4gq_LrOI"
+  
+  # Cerrar las instancias de Chromium
   killall -I chromium
   sleep 5
+  
+  # Limpiar el cache de Chromium
   rm -rf ~/.cache/chromium
   sleep 5
-  chromium-browser https://www.youtube.com/watch?v=yul4gq_LrOI --kiosk --noerrdialogs --disable-infobar --no-first-run --ozone-platform=wayland --enable-features=OverlayScrollbar --start-maximized
+  
+  # iniciar Chromium
+  chromium-browser $URL_KIOSK --kiosk --noerrdialogs --disable-infobar --no-first-run --ozone-platform=wayland --enable-features=OverlayScrollbar --start-maximized
   ```
 
 - Otorgue permisos
@@ -128,6 +138,9 @@ Este script mueve el puntero
 
 - Adicione el siguiente contenido
   ```
+  #!/bin/bash
+  
+  # Mueve el cursor fuera del rango visual
   sleep 15
   sudo ydotool mousemove --delay 1000 10000 10000
   ```
