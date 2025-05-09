@@ -4,7 +4,7 @@ https://core-electronics.com.au/guides/raspberry-pi-kiosk-mode-setup/
 -->
 
 # RaspberryPiKiosko
-Raspberry Pi en modo quiosco
+El objetivo de esta guía es explicar, paso a paso, cómo configurar una **Raspberry Pi 5** para mostrar una página web en modo quiosco utilizando **Chromium** sobre **Raspberry Pi OS de 64 bits**.
 
 ## CONFIGURAR SSH
 
