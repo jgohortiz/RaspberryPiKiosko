@@ -1,7 +1,3 @@
-<!-- 
-https://www.raspberrypi.com/tutorials/how-to-use-a-raspberry-pi-in-kiosk-mode/
-https://core-electronics.com.au/guides/raspberry-pi-kiosk-mode-setup/
--->
 
 # RaspberryPiKiosko
 El objetivo de esta guía es explicar, paso a paso, cómo configurar una **Raspberry Pi 5** para mostrar una página web en modo quiosco utilizando **Chromium** sobre **Raspberry Pi OS de 64 bits**.
@@ -204,3 +200,9 @@ Habilitar el servicio
   sudo systemctl status cron.serviceCopiar
   sudo systemctl enable cron.serviceCopiar
   ```
+
+
+> ** Links de interés (Créditos a cada autor)
+> - https://www.raspberrypi.com/tutorials/how-to-use-a-raspberry-pi-in-kiosk-mode/
+> - https://core-electronics.com.au/guides/raspberry-pi-kiosk-mode-setup/
+> - https://phoenixnap.com/kb/crontab-reboot
