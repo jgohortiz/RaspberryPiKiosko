@@ -42,15 +42,19 @@ Banner /etc/issue
 ```
 > El parámetro *Banner* es opcional.
 
+> [!NOTE]
+> Si se activa el banner de entrada, es posible personalizar el texto que se mostrará. Para ello, edite el archivo de configuración correspondiente e ingrese el contenido deseado, para hacerlo editeelarchivo.
+
+- Definir el banner de entrada.
+```
+sudo nano /etc/issue
+```
+
 - Reinicie el servicio
 ```
 sudo systemctl restart ssh
 ```
 
-- Definir el banner de entrada. *Si se activa el banner de entrada, es posible personalizar el texto que se mostrará. Para ello, edite el archivo de configuración correspondiente e ingrese el contenido deseado, para hacerlo editeelarchivo.*
-```
-sudo nano /etc/issue
-```
 
 
 
