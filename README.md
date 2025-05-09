@@ -48,6 +48,7 @@ sudo systemctl restart ssh
 ```
 
 - Definir el baner de entrada
+
 Si establece el baner de entrada como activo, puede editar el texto que se muestra. Para hacerlo, edite el archivo de configuración e Ingrese la información a mostrar
 ```
 sudo nano /etc/issue
