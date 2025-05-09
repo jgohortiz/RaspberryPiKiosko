@@ -206,4 +206,4 @@ Habilitar el servicio
 > - https://www.raspberrypi.com/tutorials/how-to-use-a-raspberry-pi-in-kiosk-mode/
 > - https://core-electronics.com.au/guides/raspberry-pi-kiosk-mode-setup/
 > - https://phoenixnap.com/kb/crontab-reboot
-> Excelente material, no olvides pasar a verlos.
+> \Excelente material, no olvides pasar a verlos.
