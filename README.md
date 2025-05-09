@@ -18,7 +18,7 @@ Como sistema operativo, elige Raspberry Pi OS, instalalo usando Raspberry Pi Ima
 
 
 > [!TIP]
-> En el siguiente enlace puedes ver como instalar el sistemaoperativo en detalle > [Install an operating system](https://www.raspberrypi.com/documentation/computers/getting-started.html#installing-the-operating-system).
+> En el siguiente enlace puedes ver como instalar el sistema operativo en detalle > [Install an operating system](https://www.raspberrypi.com/documentation/computers/getting-started.html#installing-the-operating-system).
 
 ## 2. CONFIGURAR SSH (Básica)
 Para mejorar la seguridad de la conexión SSH, configuraremos algunos parámetros iniciales; más adelante, reforzaremos aún más estas medidas.
