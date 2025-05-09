@@ -106,7 +106,7 @@ Este script ejecuta el navegador
 
 - Adicione el siguiente contenido
   ```
-  sudo killall -I chromium
+  killall -I chromium
   sleep 5
   rm -rf ~/.cache/chromium
   sleep 5
