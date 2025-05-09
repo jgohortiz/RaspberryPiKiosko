@@ -189,7 +189,7 @@ Definir el trabajo
   @reboot /home/pi/hide_cursor.sh
   ```
 
-Ejecutar el trabajo con retraso
+Ejecutar el trabajo con retraso, si desea hacerlo deberá adicionar `sleep` como se muestra abajo.
 - Adicione al final
   ```  
   @reboot sleep 300 && /home/pi/run_kiosk.sh
