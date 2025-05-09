@@ -88,9 +88,6 @@ Ahora, navegue entre las opciones listadas a continuación y establezca el valor
 		- :Desktop
 	- Autologin
 		- :Yes
-- *Interface Option* 
-	- VNC
-		- :Yes		
 - *Advanced Options*
 	- Wayland
 		- :wayfire
