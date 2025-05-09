@@ -69,7 +69,7 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-Instale las utilidaes *wtype* y *ydotool*, es opcional *tightvncserver*
+Instale las utilidaes `wtype` y `ydotool`, es opcional `tightvncserver`
 ```
 sudo apt install wtype
 sudo apt install ydotool
@@ -82,7 +82,7 @@ Defina los siguientes parámetros del SO, para hacerlo Ingrese en la consola
 sudo raspi-config
 ```
 
-Ahora, navegue entre las opciones listadas a continuación y establezca el valor señalado
+Ahora, navegue entre las opciones listadas a continuación y establezca el valor señalado.
 - System Options 
 	- Boot
 		- :Desktop
@@ -99,7 +99,7 @@ Ahora, navegue entre las opciones listadas a continuación y establezca el valor
 Por último, finalice y reinicie la Raspberry.
 
 ## 4. SCRIPTS
-A continuación crearemos los scrips necesarios	
+A continuación crearemos los scrips necesarios	.
 
 ### run_kiosk.sh
 > [!IMPORTANT] 
@@ -146,7 +146,7 @@ sudo chmod +x /home/pi/hide_cursor.sh
 
 
 ## 5. CONFIGURACIÓN PARA EL INICIO AUTOMÁTICO
-Para el inicio automático usaremos *wayland*, para eso evitaremos el archivo *wayfire.ini*, el cual hace el llamado inicial los scripts.
+Para el inicio automático usaremos `wayland`, para eso evitaremos el archivo `wayfire.ini`, el cual hace el llamado inicial los scripts.
 
 Edite el archivo de configuración
 ```
@@ -173,4 +173,4 @@ Ejecute
 tightvncserver
 ```
 
-La primera vez deberá especificar la contraseña, por ejemplo, *passwordPiVNC**. Para conectarse use la IP y el puerto 5901
+La primera vez deberá especificar la contraseña, por ejemplo, `passwordPiVNC*`. Para conectarse use la `IP` y el puerto `5901`.
