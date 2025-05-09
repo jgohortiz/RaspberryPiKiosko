@@ -162,6 +162,8 @@ Para el inicio automático usaremos `wayland`, para eso evitaremos el archivo `w
 ## 6. OPCIONALES
 A continuación, se explica como configurar algunos opcionales.
 
+### tightvncserver
+
 > [!NOTE] 
 > **tightvncserver**: Iniciar el servicio de VNC
 
@@ -172,6 +174,8 @@ A continuación, se explica como configurar algunos opcionales.
 
 La primera vez deberá especificar la contraseña, por ejemplo, `passwordPiVNC*`. Para conectarse use la `IP` y el puerto `5901`.
 
+
+## crontab
 
 > [!NOTE] 
 > **crontab**: Ejecutar los scripts al iniciar (Sin modificar `wayfire.ini`
