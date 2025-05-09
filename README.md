@@ -196,3 +196,11 @@ Ejecutar el trabajo con retraso
   @reboot sleep 300 && /home/pi/run_kiosk.sh
   @reboot sleep 300 && /home/pi/hide_cursor.sh
   ```
+
+Habilitar el servicio
+
+- Ejecute 
+  ```
+  sudo systemctl status cron.serviceCopiar
+  sudo systemctl enable cron.serviceCopiar
+  ```
