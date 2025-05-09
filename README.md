@@ -178,6 +178,8 @@ La primera vez deberá especificar la contraseña, por ejemplo, `passwordPiVNC*`
 > [!NOTE] 
 > **crontab**: Ejecutar los scripts al iniciar (Sin modificar `wayfire.ini`)
 
+Con `crontab`, tienes control total sobre cuándo y cómo se ejecutan los trabajos. Úsalo para ejecución de los scrpts. `crontab` tiene bajos requisitos de recursos ya que no reserva memoria del sistema cuando no se está ejecutando.
+
 Definir el trabajo 
 - Ejecute
   ```
