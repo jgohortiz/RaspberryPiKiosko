@@ -155,7 +155,7 @@ Para el inicio automático usaremos `wayland`, para eso evitaremos el archivo `w
   dpms = false
   ```
 
-## 6. OPCIONALES
+## OPCIONALES
 A continuación, se explica como configurar algunos opcionales.
 
 ### tightvncserver
@@ -201,7 +201,7 @@ Habilitar el servicio
   sudo systemctl enable cron.service
   ```
 
-### Links de interés
+## Links de interés
 > Créditos a cada autor :+1:
 > 
 > - https://www.raspberrypi.com/tutorials/how-to-use-a-raspberry-pi-in-kiosk-mode/
