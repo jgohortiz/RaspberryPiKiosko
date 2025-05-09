@@ -96,12 +96,12 @@ Por último, finalice y reinicie la Raspberry.
 ## 4. SCRIPTS
 A continuación crearemos los scrips necesarios	.
 
-### run_kiosk.sh
+### wrkPiKiosCallChromium.sh
 Este script ejecuta el navegador
 
 - Cree el archivo con el script de inicio
   ```
-  sudo nano /home/pi/run_kiosk.sh
+  sudo nano /home/pi/wrkPiKiosCallChromium.sh
   ```
 
 - Adicione el siguiente contenido
@@ -110,20 +110,20 @@ Este script ejecuta el navegador
   sleep 5
   rm -rf ~/.cache/chromium
   sleep 5
-  chromium-browser https://time.is/London --kiosk --noerrdialogs --disable-infobar --no-first-run --ozone-platform=wayland --enable-features=OverlayScrollbar --start-maximized
+  chromium-browser https://www.youtube.com/watch?v=yul4gq_LrOI --kiosk --noerrdialogs --disable-infobar --no-first-run --ozone-platform=wayland --enable-features=OverlayScrollbar --start-maximized
   ```
 
-- Otorge permisos
+- Otorgue permisos
   ```
-  sudo chmod +x /home/pi/run_kiosk.sh
+  sudo chmod +x /home/pi/wrkPiKiosCallChromium.sh
   ```
 
-### hide_cursor.sh
+### wrkPiKiosHideCursor.sh
 Este script mueve el puntero
 
 - Cree el archivo con el script de inicio
   ```
-  sudo nano /home/pi/hide_cursor.sh
+  sudo nano /home/pi/wrkPiKiosHideCursor.sh
   ```
 
 - Adicione el siguiente contenido
@@ -132,9 +132,9 @@ Este script mueve el puntero
   sudo ydotool mousemove --delay 1000 10000 10000
   ```
 
-- Otorge permisos
+- Otorgue permisos
   ```
-  sudo chmod +x /home/pi/hide_cursor.sh
+  sudo chmod +x /home/pi/wrkPiKiosHideCursor.sh
   ```
 
 
@@ -149,8 +149,8 @@ Para el inicio automático usaremos `wayland`, para eso evitaremos el archivo `w
 - Adicione en [autostart]
   ```
   [autostart]
-  kiosk = /home/pi/run_kiosk.sh
-  cursor = /home/pi/hide_cursor.sh
+  kiosk = /home/pi/wrkPiKiosCallChromium.sh
+  cursor = /home/pi/wrkPiKiosHideCursor.sh
   screensaver = false
   dpms = false
   ```
