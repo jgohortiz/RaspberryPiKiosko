@@ -162,7 +162,7 @@ screensaver = false
 dpms = false
 ```
 
-## 5. OPCIONALES
+## 6. OPCIONALES
 A continuación, se explica como configurar algunos opcionales.
 
 > [!NOTE] 
