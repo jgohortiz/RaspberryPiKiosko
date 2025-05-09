@@ -15,14 +15,16 @@ Como sistema operativo, elige Raspberry Pi OS, instalalo usando Raspberry Pi Ima
 	- Ingrese el SSID (nombre) y la contraseña de su red
 - Marque la casilla junto a Habilitar SSH para que podamos conectarnos al **Raspberry Pi 5** por Putty.
 
-## CONFIGURAR SSH
+## 2. CONFIGURAR SSH (Básica)
+Para mejorar la seguridad de la conexión SSH, configuraremos algunos parámetros iniciales; más adelante, reforzaremos aún más estas medidas.
 
-### Edite el archivo de configuración
+
+- Edite el archivo de configuración SSH
 ```
-nano /etc/ssh/sshd_config
+sudo nano /etc/ssh/sshd_config
 ```
 
-### Establezca los siguientes parámetros
+- Establezca los siguientes parámetros
 ```
 LoginGraceTime 1m
 PermitRootLogin prohibit-password
@@ -38,17 +40,17 @@ PrintMotd no
 AcceptEnv LANG LC_*
 Banner /etc/issue
 ```
+> El parámetro *Banner* es opcional.
 
-### Reinicie el servicio
+- Reinicie el servicio
 ```
 sudo systemctl restart ssh
 ```
 
-## BANNER DE ENTRADA
-
-## Edite el archivo de configuración
+- Definir el baner de entrada
+Si establece el baner de entrada como activo, puede editar el texto que se muestra. Para hacerlo, edite el archivo de configuración e Ingrese la información a mostrar
 ```
-nano /etc/issue
+sudo nano /etc/issue
 ```
 
 
