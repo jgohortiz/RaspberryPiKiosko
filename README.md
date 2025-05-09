@@ -98,13 +98,14 @@ Ahora, navegue entre las opciones listadas a continuación y establezca el valor
 
 Por último, finalice y reinicie la Raspberry.
 
-- Script
+## 4. Script
 A continuación crearemos los scrips necesarios	
 
+## run_kiosk.sh
 > [!NOTE] 
-> **run_kiosk.sh**: Este script ejecuta el navegador
+> Este script ejecuta el navegador
 
-	- Cree el archivo con el script de inicio
+- Cree el archivo con el script de inicio
 ```
 sudo nano /home/pi/run_kiosk.sh
 ```
@@ -116,14 +117,16 @@ rm -rf ~/.cache/chromium
 sleep 5
 chromium-browser https://time.is/London --kiosk --noerrdialogs --disable-infobars --no-first-run --ozone-platform=wayland --enable-features=OverlayScrollbar --start-maximized
 ```
-	- Otorge permisos
+- Otorge permisos
 ```
 sudo chmod +x /home/pi/run_kiosk.sh
 ```
-> [!NOTE] 
-> **hide_cursor.sh**: Este script mueve el puntero
 
-	- Cree el archivo con el script de inicio
+## hide_cursor.sh
+> [!NOTE] 
+> Este script mueve el puntero
+
+- Cree el archivo con el script de inicio
 ```
 sudo nano /home/pi/hide_cursor.sh
 ```
@@ -136,6 +139,8 @@ sudo ydotool mousemove --delay 1000 10000 10000
 ```
 sudo chmod +x /home/pi/hide_cursor.sh
 ```
+
+
 
 > [!NOTE] 
 > **wayfire.ini**: Este archivo hace el llamado inicial  los script
