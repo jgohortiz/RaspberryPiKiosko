@@ -47,9 +47,7 @@ Banner /etc/issue
 sudo systemctl restart ssh
 ```
 
-- Definir el baner de entrada
-
-Si establece el baner de entrada como activo, puede editar el texto que se muestra. Para hacerlo, edite el archivo de configuración e Ingrese la información a mostrar
+- Definir el banner de entrada. *Si se activa el banner de entrada, es posible personalizar el texto que se mostrará. Para ello, edite el archivo de configuración correspondiente e ingrese el contenido deseado, para hacerlo editeelarchivo.
 ```
 sudo nano /etc/issue
 ```
