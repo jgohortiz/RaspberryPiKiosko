@@ -246,6 +246,7 @@ Definir el trabajo
 - Adicione al final
   ```  
   * */6 * * * reboot now >/dev/null 2>&1
+  @rebot date>>/home/pi/date.log
   ```
 
 Habilitar el servicio
