@@ -23,12 +23,12 @@ Para mejorar la seguridad de la conexión SSH, configuraremos algunos parámetro
 > [!IMPORTANT]
 > **CONEXIÓN SSH**: Para conectarse por SSH use Putty. Utilice el nombre de host o la dirección IP, el puerto por defecto es el 22.
 
-- Edite el archivo de configuración SSH
+Edite el archivo de configuración SSH
 ```
 sudo nano /etc/ssh/sshd_config
 ```
 
-- Establezca los siguientes parámetros
+Establezca los siguientes parámetros
 ```
 LoginGraceTime 1m
 PermitRootLogin prohibit-password
@@ -49,12 +49,12 @@ Banner /etc/issue
 > [!NOTE]
 > Si se activa el banner de entrada, es posible personalizar el texto que se mostrará. Para ello, edite el archivo de configuración correspondiente e ingrese el contenido deseado, para hacerlo editeelarchivo.
 
-- Definir el banner de entrada.
+Definir el banner de entrada.
 ```
 sudo nano /etc/issue
 ```
 
-- Reinicie el servicio
+Reinicie el servicio
 ```
 sudo systemctl restart ssh
 ```
@@ -63,20 +63,20 @@ sudo systemctl restart ssh
 ## 3. CONFIGURAR EL MODO QUIOSCO
 Para lograr el objetivo, instalaremos algunos recursos, configuraremos parámetros en el sistema operativo, crearemos algunos scripts… ¡y el resultado estará listo como por arte de magia!
 
-- Actualice el SO
+Actualice el SO
 ```
 sudo apt update
 sudo apt full-upgrade
 ```
 
-- Instale las utilidaes *wtype* y *ydotool*, es opcional *tightvncserver*
+Instale las utilidaes *wtype* y *ydotool*, es opcional *tightvncserver*
 ```
 sudo apt install wtype
 sudo apt install ydotool
 sudo apt install tightvncserver
 ```
 
-- Configuración necesaria en *Raspberry Pi OS de 64 bits*
+Configuración necesaria en *Raspberry Pi OS de 64 bits*
 Defina los siguientes parámetros del SO, para hacerlo Ingrese en la consola
 ```
 sudo raspi-config
@@ -105,12 +105,12 @@ A continuación crearemos los scrips necesarios
 > [!IMPORTANT] 
 > Este script ejecuta el navegador
 
-- Cree el archivo con el script de inicio
+Cree el archivo con el script de inicio
 ```
 sudo nano /home/pi/run_kiosk.sh
 ```
 
-- Adicione el siguiente contenido
+Adicione el siguiente contenido
 ```
 sudo killall -I chromium
 sleep 5
@@ -119,7 +119,7 @@ sleep 5
 chromium-browser https://time.is/London --kiosk --noerrdialogs --disable-infobars --no-first-run --ozone-platform=wayland --enable-features=OverlayScrollbar --start-maximized
 ```
 
-- Otorge permisos
+Otorge permisos
 ```
 sudo chmod +x /home/pi/run_kiosk.sh
 ```
@@ -128,32 +128,32 @@ sudo chmod +x /home/pi/run_kiosk.sh
 > [!IMPORTANT] 
 > Este script mueve el puntero
 
-- Cree el archivo con el script de inicio
+Cree el archivo con el script de inicio
 ```
 sudo nano /home/pi/hide_cursor.sh
 ```
 
-- Adicione el siguiente contenido
+Adicione el siguiente contenido
 ```
 sleep 15
 sudo ydotool mousemove --delay 1000 10000 10000
 ```
 
-- Otorge permisos
+Otorge permisos
 ```
 sudo chmod +x /home/pi/hide_cursor.sh
 ```
 
 
+## 5. CONFIGURACIÓN PARA EL INICIO AUTOMÁTICO
+Para el inicio automático usaremos *wayland*, para eso evitaremos el archivo *wayfire.ini*, el cual hace el llamado inicial los scripts.
 
-> [!NOTE] 
-> **wayfire.ini**: Este archivo hace el llamado inicial  los script
-
-- Edite el archivo de configuración
+Edite el archivo de configuración
 ```
 sudo nano /home/pi/.config/wayfire.ini
 ```
-- Adicione en [autostart]
+
+Adicione en [autostart]
 ```
 [autostart]
 kiosk = /home/pi/run_kiosk.sh
@@ -162,15 +162,15 @@ screensaver = false
 dpms = false
 ```
 
+## 5. OPCIONALES
+A continuación, se explica como configurar algunos opcionales.
+
 > [!NOTE] 
 > **tightvncserver**: Iniciar el servicio de VNC
 
-- Ejecute
+Ejecute
 ```
 tightvncserver
 ```
-- La primera vez deberá especificar la contraseña
-```
-Password >> passwordPiVNC*
-```
-Para conectarse use la IP y el puerto 5901
+
+La primera vez deberá especificar la contraseña, por ejemplo, passwordPiVNC*. Para conectarse use la IP y el puerto 5901
