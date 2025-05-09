@@ -6,6 +6,7 @@ https://core-electronics.com.au/guides/raspberry-pi-kiosk-mode-setup/
 # RaspberryPiKiosko
 El objetivo de esta guía es explicar, paso a paso, cómo configurar una **Raspberry Pi 5** para mostrar una página web en modo quiosco utilizando **Chromium** sobre **Raspberry Pi OS de 64 bits**.
 
+
 ## 1. INSTALAR EL SISTEMA OPERATIVO **Raspberry Pi OS de 64 bits**
 Como sistema operativo, elige Raspberry Pi OS, instalalo usando Raspberry Pi Imager. Durante la etapa de personalización del sistema operativo, edite la configuración de la siguiente manera:
 - Ingrese un nombre de host de su elección. 
@@ -14,6 +15,7 @@ Como sistema operativo, elige Raspberry Pi OS, instalalo usando Raspberry Pi Ima
 	- Marque la casilla junto a Configurar LAN inalámbrica para que su Pi pueda conectarse automáticamente a Wi-Fi
 	- Ingrese el SSID (nombre) y la contraseña de su red
 - Marque la casilla junto a Habilitar SSH para que podamos conectarnos al **Raspberry Pi 5** por Putty.
+
 
 ## 2. CONFIGURAR SSH (Básica)
 Para mejorar la seguridad de la conexión SSH, configuraremos algunos parámetros iniciales; más adelante, reforzaremos aún más estas medidas.
@@ -58,41 +60,44 @@ sudo systemctl restart ssh
 ```
 
 
+## 3. CONFIGURAR EL MODO QUIOSCO
+Para lograr el objetivo, instalaremos algunos recursos, configuraremos parámetros en el sistema operativo, crearemos algunos scripts… ¡y el resultado estará listo como por arte de magia!
 
-
-## CONFIGURAR EL MODO QUIOSCO
-
-### Actualice
+- Actualice el SO
 ```
 sudo apt update
 sudo apt full-upgrade
 ```
 
-### Instale wtype + ydotool
+- Instale las utilidaes *wtype* y *ydotool*, es opcional *tightvncserver*
 ```
 sudo apt install wtype
 sudo apt install ydotool
 sudo apt install tightvncserver
 ```
 
-### CONFIGURAR EL INICIO EN DESKTOP (MODO ESCRITORIO) CON AUTOLOGIN
+- *Raspberry Pi OS de 64 bits*
+Defina los siguientes parámetros del SO, para hacerlo Ingrese en la consola
 ```
 sudo raspi-config
 ```
+
+Ahora, navegue entre las opciones listadas a continuación y establezca el valor señalado
 - System Options 
 	- Boot
-		- Desktop
+		- :Desktop
 - System Options 
 	- Autologin
-		- Yes
+		- :Yes
 - Interface Option 
 	- VNC
-		- Yes		
+		- :Yes		
 - Advanced Options
 	- Wayland
-		- wayfire
-- Finish
-	- Reboot
+		- :wayfire
+
+Por último, finalice y reinicie la Raspberry.
+
 	
 ### INICIAR RASPBERRY PI EN MODO QUIOSCO
 
