@@ -1,6 +1,6 @@
 
 # RaspberryPiKiosko
-El objetivo de esta guía es explicar, paso a paso, cómo configurar una **Raspberry Pi 5** para mostrar una página web en modo quiosco utilizando **Chromium** sobre **Raspberry Pi OS de 64 bits**.
+El objetivo de esta guía es explicar, paso a paso, cómo configurar (fundamentos básicos para la configuración) una **Raspberry Pi 5** para mostrar una página web en modo quiosco utilizando **Chromium** sobre **Raspberry Pi OS de 64 bits**.
 
 
 ## 1. INSTALAR EL SISTEMA OPERATIVO **Raspberry Pi OS de 64 bits**
@@ -80,17 +80,17 @@ Para lograr el objetivo, instalaremos algunos recursos, configuraremos parámetr
   ```
   sudo raspi-config
   ```
-
-Ahora, navegue entre las opciones listadas a continuación y establezca el valor señalado.
-- **System Options**
-	- Boot
-		- :Desktop
-	- Autologin
-		- :Yes
-- *Advanced Options*
-	- Wayland
-		- :wayfire
-
+- Establezca las propiedades
+  Ahora, navegue entre las opciones listadas a continuación y establezca el valor señalado.
+  - **System Options**
+  	- Boot
+  		- :Desktop
+  	- Autologin
+  		- :Yes
+  - *Advanced Options*
+  	- Wayland
+  		- :wayfire
+  
 Por último, finalice y reinicie la Raspberry.
 
 ## 4. SCRIPTS
@@ -171,9 +171,41 @@ Para el inicio automático usaremos `wayland`, para eso evitaremos el archivo `w
   @reboot echo 'usb3' | tee /sys/bus/usb/drivers/usb/unbind; echo 'usb3'
   @reboot echo 'usb4' | tee /sys/bus/usb/drivers/usb/unbind; echo 'usb4'
   #@reboot sudo ifconfig eth0 down
+  @reboot sudo ifconfig wlan0 down
   ```
 > [!NOTE]
 > Comente con `#` la linea de los puertos que son necesarios dejar habilitados.
+
+### Desactivar Bluetooth
+- Ejecute
+  ```
+  sudo -i
+  sudo nano /boot/firmware/config.txt
+  ```
+  
+- Adicione al final del archivo
+  ```
+  # Desactivar bluetooth
+  dtoverlay=disable-bt
+  ```
+> [!NOTE]
+> Para habilitarlo solo debera comentar la linea y reiniciar.
+
+### Modo de solo lectura de la tarjeta SD
+- Ejecute
+  ```
+  sudo raspi-config
+  ```
+- Active `Overlay File System`  
+  Ahora, navegue entre las opciones listadas a continuación y establezca el valor señalado.
+  - **Performance options**
+  	- Overlay File System
+  		- :yes
+> [!NOTE]
+> Para habilitar la escritura debera rever el `Overlay File System` .
+
+Por último, finalice y reinicie la Raspberry.
+
 
 ## OPCIONALES
 A continuación, se explica como configurar algunos opcionales.
