@@ -263,5 +263,6 @@ Habilitar el servicio
 > - https://core-electronics.com.au/guides/raspberry-pi-kiosk-mode-setup/
 > - https://crontab-generator.org/
 > - https://phoenixnap.com/kb/crontab-reboot
+> - https://github.com/geerlingguy/pi-kiosk/tree/master
 > 
 > Excelente material, no olvides pasar a verlos.
