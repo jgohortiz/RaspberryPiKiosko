@@ -17,7 +17,7 @@ Como sistema operativo, elige Raspberry Pi OS, instalalo usando Raspberry Pi Ima
 > En el siguiente enlace puedes ver como instalar el sistema operativo en detalle > [Install an operating system](https://www.raspberrypi.com/documentation/computers/getting-started.html#installing-the-operating-system).
 
 ## 2. CONFIGURAR SSH (Básica)
-Para mejorar la seguridad de la conexión SSH, configuraremos algunos parámetros iniciales; más adelante, reforzaremos aún más estas medidas.
+Para mejorar la seguridad de la conexión SSH, configuraremos algunos parámetros iniciales.
 
 > [!IMPORTANT]
 > **CONEXIÓN SSH**: Para conectarse por SSH use Putty. Utilice el nombre de host o la dirección IP, el puerto por defecto es el 22.
@@ -94,10 +94,10 @@ Para lograr el objetivo, instalaremos algunos recursos, configuraremos parámetr
 Por último, finalice y reinicie la Raspberry.
 
 ## 4. SCRIPTS
-A continuación crearemos los scrips necesarios	.
+En esta sección se presentan scripts diseñados para optimizar la experiencia de usuario en el kiosco. Se incluye un script para la apertura automatizada de Chromium en modo kiosco, garantizando una navegación sin distracciones, y otro para ocultar el puntero del mouse moviéndolo fuera del área visible, mejorando la estética y funcionalidad de la interfaz.
 
-### wrk_pikiosk_call_chromium.sh
-Este script ejecuta el navegador
+### SCRIPT PARA LA APERTURA DE CHROMIUM
+Este script está diseñado para iniciar Chromium en modo kiosco, proporcionando una experiencia de navegación limpia y sin interrupciones, el navegador se abre a pantalla completa, sin barras de herramientas ni mensajes de error.
 
 - Cree el archivo con el script de inicio
   ```
@@ -128,8 +128,8 @@ Este script ejecuta el navegador
   sudo chmod +x /home/pi/wrk_pikiosk_call_chromium.sh
   ```
 
-### wrk_pikiosk_hide_cursor.sh
-Este script mueve el puntero
+### SCRIPT PARA OCULTAR EL PUNTERO DEL MOUSE
+Este script utiliza la herramienta ydotool para mover el puntero del mouse fuera del área visible de la pantalla, simulando su ocultamiento, el cursor se desplaza automáticamente, después de un breve retraso, a una posición lejana, minimizando distracciones visuales en entornos donde no se requiere interacción directa con el mouse. 
 
 - Cree el archivo con el script de inicio
   ```
@@ -170,7 +170,9 @@ Para el inicio automático usaremos `wayland`, para eso evitaremos el archivo `w
 
 ## 6. SEGURIDAD
 
-### Deshabilitar puertos USB y Ethernet
+En entornos donde la seguridad es prioritaria, es fundamental limitar los medios de conexión física e inalámbrica que puedan representar riesgos. Este apartado aborda la implementación de medidas básicas de protección, como la deshabilitación de puertos USB, conexiones Ethernet o Wi-Fi, y la desactivación del Bluetooth. Estas acciones ayudan a prevenir accesos no autorizados, fugas de información y otros vectores comunes de ataque en sistemas expuestos o de uso público.
+
+### Deshabilitar puertos USB y Ethernet o WIFI
 - Ejecute
   ```
   sudo -i
@@ -223,7 +225,7 @@ Por último, finalice y reinicie la Raspberry.
 ## OPCIONALES
 A continuación, se explica como configurar algunos opcionales.
 
-### tightvncserver
+### ACCESO REMOTO CON TIGHTVNC SERVER
 - Ejecute
   ```
   tightvncserver
@@ -233,7 +235,7 @@ La primera vez deberá especificar la contraseña, por ejemplo, `passwordPiVNC*`
 > [!NOTE] 
 > **tightvncserver**: Iniciar el servicio de VNC
 
-### crontab
+### AUTOMATIZACIÓN DE TAREAS CON CRONTAB
 Con `crontab`, tienes control total sobre cuándo y cómo se ejecutan los trabajos. Puedes usarlo para reiniciar la Raspberry de forma automática cada cierto tiempo. `crontab` tiene bajos requisitos de recursos ya que no reserva memoria del sistema cuando no se está ejecutando.
 
 Definir el trabajo 
