@@ -171,3 +171,18 @@ A continuación, se explica como configurar algunos opcionales.
   ```
 
 La primera vez deberá especificar la contraseña, por ejemplo, `passwordPiVNC*`. Para conectarse use la `IP` y el puerto `5901`.
+
+
+> [!NOTE] 
+> **crontab**: Ejecutar los scripts al iniciar (Sin modificar `wayfire.ini`
+
+- Ejecute
+  ```
+  crontab -e
+  ```
+
+- Adicione al final
+  ```  
+  @reboot /home/pi/run_kiosk.sh
+  @reboot /home/pi/hide_cursor.sh
+  ```
