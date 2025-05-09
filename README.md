@@ -76,7 +76,7 @@ sudo apt install ydotool
 sudo apt install tightvncserver
 ```
 
-- *Raspberry Pi OS de 64 bits*
+- Configuración necesaria en *Raspberry Pi OS de 64 bits*
 Defina los siguientes parámetros del SO, para hacerlo Ingrese en la consola
 ```
 sudo raspi-config
@@ -98,17 +98,17 @@ Ahora, navegue entre las opciones listadas a continuación y establezca el valor
 
 Por último, finalice y reinicie la Raspberry.
 
-	
-### INICIAR RASPBERRY PI EN MODO QUIOSCO
+- Script
+A continuación crearemos los scrips necesarios	
 
 > [!NOTE] 
 > **run_kiosk.sh**: Este script ejecuta el navegador
 
-- Cree el archivo con el script de inicio
+	- Cree el archivo con el script de inicio
 ```
 sudo nano /home/pi/run_kiosk.sh
 ```
-- Adicione el siguiente contenido
+	- Adicione el siguiente contenido
 ```
 sudo killall -I chromium
 sleep 5
@@ -116,26 +116,27 @@ rm -rf ~/.cache/chromium
 sleep 5
 chromium-browser https://time.is/London --kiosk --noerrdialogs --disable-infobars --no-first-run --ozone-platform=wayland --enable-features=OverlayScrollbar --start-maximized
 ```
-- Otorge permisos
+	- Otorge permisos
 ```
 sudo chmod +x /home/pi/run_kiosk.sh
 ```
 > [!NOTE] 
 > **hide_cursor.sh**: Este script mueve el puntero
 
-- Cree el archivo con el script de inicio
+	- Cree el archivo con el script de inicio
 ```
 sudo nano /home/pi/hide_cursor.sh
 ```
-- Adicione el siguiente contenido
+	- Adicione el siguiente contenido
 ```
 sleep 15
 sudo ydotool mousemove --delay 1000 10000 10000
 ```
-- Otorge permisos
+	- Otorge permisos
 ```
 sudo chmod +x /home/pi/hide_cursor.sh
 ```
+
 > [!NOTE] 
 > **wayfire.ini**: Este archivo hace el llamado inicial  los script
 
