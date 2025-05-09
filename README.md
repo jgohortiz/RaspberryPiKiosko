@@ -197,8 +197,8 @@ Ejecutar el trabajo con retraso, si desea hacerlo deberá adicionar `sleep` como
 Habilitar el servicio
 - Ejecute 
   ```
-  sudo systemctl status cron.serviceCopiar
-  sudo systemctl enable cron.serviceCopiar
+  sudo systemctl status cron.service
+  sudo systemctl enable cron.service
   ```
 
 ### Links de interés
