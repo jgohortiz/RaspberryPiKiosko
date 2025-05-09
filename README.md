@@ -6,7 +6,7 @@ https://core-electronics.com.au/guides/raspberry-pi-kiosk-mode-setup/
 # RaspberryPiKiosko
 El objetivo de esta guía es explicar, paso a paso, cómo configurar una **Raspberry Pi 5** para mostrar una página web en modo quiosco utilizando **Chromium** sobre **Raspberry Pi OS de 64 bits**.
 
-## INSTALAR EL SISTEMA OPERATIVO **Raspberry Pi OS de 64 bits**
+1. ## INSTALAR EL SISTEMA OPERATIVO **Raspberry Pi OS de 64 bits**
 Como sistema operativo, elige Raspberry Pi OS, instalalo usando Raspberry Pi Imager. Durante la etapa de personalización del sistema operativo, edite la configuración de la siguiente manera:
 - Ingrese un nombre de host de su elección. 
 - Ingrese un nombre de usuario y una contraseña.
