@@ -17,6 +17,9 @@ Como sistema operativo, elige Raspberry Pi OS, instalalo usando Raspberry Pi Ima
 - Marque la casilla junto a Habilitar SSH para que podamos conectarnos al **Raspberry Pi 5** por Putty.
 
 
+> [!TIP]
+> En el siguiente enlace puedes ver como instalar el sistemaoperativo en detalle > [Install an operating system](https://www.raspberrypi.com/documentation/computers/getting-started.html#installing-the-operating-system).
+
 ## 2. CONFIGURAR SSH (Básica)
 Para mejorar la seguridad de la conexión SSH, configuraremos algunos parámetros iniciales; más adelante, reforzaremos aún más estas medidas.
 
