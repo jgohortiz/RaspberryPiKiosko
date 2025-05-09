@@ -6,6 +6,15 @@ https://core-electronics.com.au/guides/raspberry-pi-kiosk-mode-setup/
 # RaspberryPiKiosko
 El objetivo de esta guía es explicar, paso a paso, cómo configurar una **Raspberry Pi 5** para mostrar una página web en modo quiosco utilizando **Chromium** sobre **Raspberry Pi OS de 64 bits**.
 
+## INSTALAR EL SISTEMA OPERATIVO **Raspberry Pi OS de 64 bits**
+Como sistema operativo, elige Raspberry Pi OS, instalalo usando Raspberry Pi Imager. Durante la etapa de personalización del sistema operativo, edite la configuración de la siguiente manera:
+- Ingrese un nombre de host de su elección. 
+- Ingrese un nombre de usuario y una contraseña.
+- Para conexión inalámbrica.
+	- Marque la casilla junto a Configurar LAN inalámbrica para que su Pi pueda conectarse automáticamente a Wi-Fi
+	- Ingrese el SSID (nombre) y la contraseña de su red
+- Marque la casilla junto a Habilitar SSH para que podamos conectarnos al **Raspberry Pi 5** por Putty.
+
 ## CONFIGURAR SSH
 
 ### Edite el archivo de configuración
@@ -42,14 +51,7 @@ sudo systemctl restart ssh
 nano /etc/issue
 ```
 
-## INSTALAR SO
-Como sistema operativo, elige Raspberry Pi OS, instalalo usando Raspberry Pi Imager. Durante la etapa de personalización del sistema operativo, edite la configuración de la siguiente manera:
-- Ingrese un nombre de host de su elección
-- Ingrese un nombre de usuario y una contraseña
-- Para conexión inalámbrica
-	- Marque la casilla junto a Configurar LAN inalámbrica para que su Pi pueda conectarse automáticamente a Wi-Fi
-	- Ingrese el SSID (nombre) y la contraseña de su red
-- Marque la casilla junto a Habilitar SSH para que podamos conectarnos al Pi por Putty
+
 
 ## CONEXIÓN SSH
 Para conectarse por SSH use Putty. Utilice el nombre de host o la dirección IP, el puerto por defecto es el 22.
