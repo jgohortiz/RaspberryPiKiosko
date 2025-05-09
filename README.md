@@ -23,10 +23,10 @@ Para mejorar la seguridad de la conexión SSH, configuraremos algunos parámetro
 > [!IMPORTANT]
 > **CONEXIÓN SSH**: Para conectarse por SSH use Putty. Utilice el nombre de host o la dirección IP, el puerto por defecto es el 22.
 
-Edite el archivo de configuración SSH
-```
-sudo nano /etc/ssh/sshd_config
-```
+- Edite el archivo de configuración SSH
+  ```
+  sudo nano /etc/ssh/sshd_config
+  ```
 
 Establezca los siguientes parámetros
 ```
