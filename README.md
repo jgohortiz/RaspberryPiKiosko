@@ -155,25 +155,40 @@ Para el inicio automático usaremos `wayland`, para eso evitaremos el archivo `w
   dpms = false
   ```
 
+## 6. SEGURIDAD
+
+### Deshabilitar puertos USB y Ethernet
+- Ejecute
+  ```
+  sudo -i
+  crontab -e
+  ```
+  
+- Adicione al final
+  ```
+  @reboot echo 'usb1' | tee /sys/bus/usb/drivers/usb/unbind; echo 'usb1'
+  @reboot echo 'usb2' | tee /sys/bus/usb/drivers/usb/unbind; echo 'usb2'
+  @reboot echo 'usb3' | tee /sys/bus/usb/drivers/usb/unbind; echo 'usb3'
+  @reboot echo 'usb4' | tee /sys/bus/usb/drivers/usb/unbind; echo 'usb4'
+  #@reboot sudo ifconfig eth0 down
+  ```
+> [!NOTE]
+> Comente con `#` la linea de los puertos que son necesarios dejar habilitados.
+
 ## OPCIONALES
 A continuación, se explica como configurar algunos opcionales.
 
 ### tightvncserver
-> [!NOTE] 
-> **tightvncserver**: Iniciar el servicio de VNC
-
 - Ejecute
   ```
   tightvncserver
   ```
 
 La primera vez deberá especificar la contraseña, por ejemplo, `passwordPiVNC*`. Para conectarse use la `IP` y el puerto `5901`.
-
+> [!NOTE] 
+> **tightvncserver**: Iniciar el servicio de VNC
 
 ### crontab
-> [!NOTE] 
-> **crontab**: Reiniciar la Raspberry cada seis horas
-
 Con `crontab`, tienes control total sobre cuándo y cómo se ejecutan los trabajos. Puedes usarlo para reiniciar la Raspberry de forma automática cada cierto tiempo. `crontab` tiene bajos requisitos de recursos ya que no reserva memoria del sistema cuando no se está ejecutando.
 
 Definir el trabajo 
@@ -192,6 +207,9 @@ Habilitar el servicio
   sudo systemctl status cron.service
   sudo systemctl enable cron.service
   ```
+> [!NOTE] 
+> **crontab**: Reiniciar la Raspberry cada seis horas
+
 
 ## Links de interés
 > Créditos a cada autor :+1:
