@@ -178,11 +178,11 @@ La primera vez deberá especificar la contraseña, por ejemplo, `passwordPiVNC*`
 > [!NOTE] 
 > **crontab**: Ejecutar los scripts al iniciar (Sin modificar `wayfire.ini`)
 
+Definir el trabajo 
 - Ejecute
   ```
   crontab -e
   ```
-
 - Adicione al final
   ```  
   @reboot /home/pi/run_kiosk.sh
@@ -190,7 +190,6 @@ La primera vez deberá especificar la contraseña, por ejemplo, `passwordPiVNC*`
   ```
 
 Ejecutar el trabajo con retraso
-
 - Adicione al final
   ```  
   @reboot sleep 300 && /home/pi/run_kiosk.sh
@@ -198,7 +197,6 @@ Ejecutar el trabajo con retraso
   ```
 
 Habilitar el servicio
-
 - Ejecute 
   ```
   sudo systemctl status cron.serviceCopiar
