@@ -172,9 +172,9 @@ La primera vez deberá especificar la contraseña, por ejemplo, `passwordPiVNC*`
 
 ### crontab
 > [!NOTE] 
-> **crontab**: Ejecutar los scripts al iniciar (Sin modificar `wayfire.ini`)
+> **crontab**: Reiniciar la Raspberry cada seis horas
 
-Con `crontab`, tienes control total sobre cuándo y cómo se ejecutan los trabajos. Úsalo para ejecución de los scrpts. `crontab` tiene bajos requisitos de recursos ya que no reserva memoria del sistema cuando no se está ejecutando.
+Con `crontab`, tienes control total sobre cuándo y cómo se ejecutan los trabajos. Puedes usarlo para reiniciar la Raspberry de forma automática cada cierto tiempo. `crontab` tiene bajos requisitos de recursos ya que no reserva memoria del sistema cuando no se está ejecutando.
 
 Definir el trabajo 
 - Ejecute
@@ -183,15 +183,7 @@ Definir el trabajo
   ```
 - Adicione al final
   ```  
-  @reboot /home/pi/run_kiosk.sh
-  @reboot /home/pi/hide_cursor.sh
-  ```
-
-Ejecutar el trabajo con retraso, si desea hacerlo deberá adicionar `sleep` como se muestra abajo.
-- Adicione al final
-  ```  
-  @reboot sleep 300 && /home/pi/run_kiosk.sh
-  @reboot sleep 300 && /home/pi/hide_cursor.sh
+  * */6 * * * reboot now >/dev/null 2>&1
   ```
 
 Habilitar el servicio
@@ -206,6 +198,7 @@ Habilitar el servicio
 > 
 > - https://www.raspberrypi.com/tutorials/how-to-use-a-raspberry-pi-in-kiosk-mode/
 > - https://core-electronics.com.au/guides/raspberry-pi-kiosk-mode-setup/
+> - https://crontab-generator.org/
 > - https://phoenixnap.com/kb/crontab-reboot
 > 
 > Excelente material, no olvides pasar a verlos.
