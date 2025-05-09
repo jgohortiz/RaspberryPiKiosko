@@ -98,8 +98,7 @@ Por último, finalice y reinicie la Raspberry.
 A continuación crearemos los scrips necesarios	.
 
 ### run_kiosk.sh
-> [!IMPORTANT] 
-> Este script ejecuta el navegador
+Este script ejecuta el navegador
 
 Cree el archivo con el script de inicio
 ```
@@ -121,8 +120,7 @@ sudo chmod +x /home/pi/run_kiosk.sh
 ```
 
 ### hide_cursor.sh
-> [!IMPORTANT] 
-> Este script mueve el puntero
+Este script mueve el puntero
 
 Cree el archivo con el script de inicio
 ```
