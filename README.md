@@ -18,6 +18,8 @@ Como sistema operativo, elige Raspberry Pi OS, instalalo usando Raspberry Pi Ima
 ## 2. CONFIGURAR SSH (Básica)
 Para mejorar la seguridad de la conexión SSH, configuraremos algunos parámetros iniciales; más adelante, reforzaremos aún más estas medidas.
 
+> [!IMPORTANT]
+> **CONEXIÓN SSH**: Para conectarse por SSH use Putty. Utilice el nombre de host o la dirección IP, el puerto por defecto es el 22.
 
 - Edite el archivo de configuración SSH
 ```
@@ -57,9 +59,6 @@ sudo systemctl restart ssh
 
 
 
-
-## CONEXIÓN SSH
-Para conectarse por SSH use Putty. Utilice el nombre de host o la dirección IP, el puerto por defecto es el 22.
 
 ## CONFIGURAR EL MODO QUIOSCO
 
