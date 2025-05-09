@@ -173,4 +173,4 @@ Ejecute
 tightvncserver
 ```
 
-La primera vez deberá especificar la contraseña, por ejemplo, passwordPiVNC*. Para conectarse use la IP y el puerto 5901
+La primera vez deberá especificar la contraseña, por ejemplo, *passwordPiVNC**. Para conectarse use la IP y el puerto 5901
