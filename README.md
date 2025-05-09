@@ -83,16 +83,15 @@ sudo raspi-config
 ```
 
 Ahora, navegue entre las opciones listadas a continuación y establezca el valor señalado.
-- System Options 
+- **System Options**
 	- Boot
 		- :Desktop
-- System Options 
 	- Autologin
 		- :Yes
-- Interface Option 
+- *Interface Option* 
 	- VNC
 		- :Yes		
-- Advanced Options
+- *Advanced Options*
 	- Wayland
 		- :wayfire
 
