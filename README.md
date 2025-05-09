@@ -189,12 +189,7 @@ La primera vez deberá especificar la contraseña, por ejemplo, `passwordPiVNC*`
   @reboot /home/pi/hide_cursor.sh
   ```
 
-Ejecutar un trabajo cron al arrancar con retraso
-
-- Ejecute
-  ```
-  crontab -e
-  ```
+Ejecutar el trabajo con retraso
 
 - Adicione al final
   ```  
