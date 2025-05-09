@@ -176,7 +176,7 @@ La primera vez deberá especificar la contraseña, por ejemplo, `passwordPiVNC*`
 
 ### crontab
 > [!NOTE] 
-> **crontab**: Ejecutar los scripts al iniciar (Sin modificar `wayfire.ini`
+> **crontab**: Ejecutar los scripts al iniciar (Sin modificar `wayfire.ini`)
 
 - Ejecute
   ```
