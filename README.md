@@ -175,7 +175,6 @@ En entornos donde la seguridad es prioritaria, es fundamental limitar los medios
 ### Deshabilitar puertos USB y Ethernet o WIFI
 - Ejecute
   ```
-  sudo -i
   crontab -e
   ```
   
@@ -194,7 +193,6 @@ En entornos donde la seguridad es prioritaria, es fundamental limitar los medios
 ### Desactivar Bluetooth
 - Ejecute
   ```
-  sudo -i
   sudo nano /boot/firmware/config.txt
   ```
   
@@ -246,7 +244,7 @@ Definir el trabajo
 - Adicione al final
   ```  
   * */6 * * * reboot now >/dev/null 2>&1
-  @rebot date>>/home/pi/date.log
+  @reboot date>>/home/pi/date.log
   ```
 
 Habilitar el servicio
@@ -269,3 +267,6 @@ Habilitar el servicio
 > - https://github.com/geerlingguy/pi-kiosk/tree/master
 > 
 > Excelente material, no olvides pasar a verlos.
+
+Limpiar Historial
+# history -cw && exit
